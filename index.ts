@@ -1,4 +1,12 @@
-﻿/** Defines a color stop for creating gradients */
+﻿/** This allows for other canvas implementations */
+type Canvas = {
+    width: number;
+	height: number;
+    getContext(contextId: string): CanvasRenderingContext2D;
+    toDataURL(): string;
+}
+
+/** Defines a color stop for creating gradients */
 export type ColorStop = {
     /** Any valid CSS color specification */
     color: string;
@@ -35,14 +43,14 @@ export function toRadians(degrees: number): number {
  * Wrapper and high level drawing methods for HTMLCanvasElement 2D context
  */
 export class CanvasContext2D {
+    readonly canvas: Canvas;
     readonly context: CanvasRenderingContext2D;
-    readonly canvas: HTMLCanvasElement
 
     /**
      * Gets an instance for a canvas
      * @param canvas Canvas to get a context for
      */
-    constructor(canvas: HTMLCanvasElement) {
+    constructor(canvas: Canvas) {
         this.canvas = canvas;
         this.context = canvas.getContext("2d") as CanvasRenderingContext2D;
     }
