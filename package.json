@@ -1,0 +1,17 @@
+{
+  "name": "canvas-context-2d",
+  "version": "1.0.0",
+  "description": "A wrapper and high level drawing methods for HTMLCanvasElement 2D context",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "JM Gustafson",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^3.5.10",
+    "@types/node": "^13.11.0",
+    "canvas": "^2.6.1",
+    "jasmine": "^3.5.0"
+  }
+}
