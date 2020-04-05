@@ -4,7 +4,7 @@ import * as data from "./image-data";
 
 describe("When draw to canvas", () => {
     const canvas = createCanvas(10, 10);
-    const context = new CanvasContext2D(canvas as unknown as HTMLCanvasElement);
+    const context = new CanvasContext2D(canvas);
 
     beforeEach(() => {
         context.clear();

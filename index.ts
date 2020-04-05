@@ -2,7 +2,7 @@
 type Canvas = {
     width: number;
 	height: number;
-    getContext(contextId: string): CanvasRenderingContext2D;
+    getContext(contextId: "2d"): CanvasRenderingContext2D|null;
     toDataURL(): string;
 }
 
